@@ -48,7 +48,8 @@ Return _the minimum number of minutes that must elapse until no cell has a fresh
 
 ## Brute Force
 
-Keep track of total number of oranges converted and the number of matrix converted in each traversal of the matrix as well as initial number of fresh oranges, if the total converted becomes equal to that of number of turns then return the number of minutes which will be equal to that of the number of times the matrix is traversed, if conversions in current turn is 0 and total is not equal to fresh then return -1.
+> [!Intuition]
+> Keep track of total number of oranges converted and the number of matrix converted in each traversal of the matrix as well as initial number of fresh oranges, if the total converted becomes equal to that of number of turns then return the number of minutes which will be equal to that of the number of times the matrix is traversed, if conversions in current turn is 0 and total is not equal to fresh then return -1.
 
 
 
@@ -117,9 +118,6 @@ class Solution:
 >[!Intuition] Intuition
 >In the brute force we are approaching from every cell and trying to find if it will be rotten in the current time or not, instead we can approach from the perspective of rotten oranges at each turn and calculate how many oranges will it rotten at each turn using BFS technique, then we can find out if either all oranges are rotten or we cannot rotten any more oranges, we return the time if it is former and -1 if it is latter.
 
-
-
-
 ```python
 from collections import deque
 class Solution:
@@ -169,8 +167,10 @@ class Solution:
 
 ```
 
-**Time Complexity: O ( n x n ) x 4**    
+**Time Complexity: **  $O ( n^2) x 4$
+
 
 **Reason:** Worst-case - We will be making each fresh orange rotten in the grid and for each rotten orange will check in 4 directions
 
-**Space Complexity: $O ( n x n )**
+**Space Complexity: $O ( n ^ 2 )**$
+

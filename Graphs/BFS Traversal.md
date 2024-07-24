@@ -72,27 +72,36 @@ class Solution {
 ```python
 from typing import List
 from queue import Queue
+from collections import deque
 class Solution:
     #Function to return Breadth First Traversal of given graph.
     def bfsOfGraph(self, V: int, adj: List[List[int]]) -> List[int]:
-        ans,visited = [],[False]*(V)
-        dq = Queue()
+    
+        # Create a queue for BFS
+        queue = deque([0])
         
-        ans.append(0)
-        dq.put(0)
-        visited[0] = True
+        # List to keep track of visited nodes
+        visited = [False]*V
         
-        while not dq.empty():
-            current = dq.get_nowait()
-            
-            #  Getting all the neighbors
-            for node in adj[current]:
-                if not visited[node]:
-                    visited[node] = True
-                    dq.put_nowait(node)
-                    ans.append(node)
+        # List to store the order of traversal
+        traversal_order = []
         
-        return ans
+        
+        while queue:
+            # Dequeue a vertex from the queue
+            vertex = queue.popleft()
+            traversal_order.append(vertex)
+            visited[vertex] = True
+            # Get all adjacent vertices of the dequeued vertex
+            # If an adjacent has not been visited, then mark it
+            # visited and enqueue it
+            for neighbor in adj[vertex]:
+                if not visited[neighbor]:
+                    visited[neighbor] = True
+                    queue.append(neighbor)
+        
+        return traversal_order
+
 ```
 
 >[!Time Complexity]
