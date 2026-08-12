@@ -1,6 +1,5 @@
 [Problem Link](https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/)
 [Solution Article](https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/)
-Date - **8 November 2023**
 
 This algorithm contains 3 pointers i.e. low, mid, and high, and 3 main rules.  The rules are the following:
 
