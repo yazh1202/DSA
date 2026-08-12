@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Structure.md",
+                "file": "Readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Structure"
+              "title": "Readme"
             }
           }
         ]
@@ -190,8 +190,8 @@
   },
   "active": "7fc480d0d6aea258",
   "lastOpenFiles": [
-    "Graphs/BFS_DFS _Based/Rotten Oranges.md",
     "Structure.md",
+    "Graphs/BFS_DFS _Based/Rotten Oranges.md",
     "Graphs/BFS_DFS _Based/Surrounded Regions (X-O-X-O).md",
     "Graphs/BFS_DFS _Based/Number of Provinces.md",
     "Graphs/BFS_DFS _Based/Matrix 0-1.md",
